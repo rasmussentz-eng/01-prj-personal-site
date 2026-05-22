@@ -117,19 +117,42 @@ header{
 
 /* Hero */
 .hero{
-  padding:76px 0 80px;
+  padding:90px 0 100px;
   text-align:center;
-  background:linear-gradient(180deg, rgba(255,244,241,1) 0%, rgba(242,222,222,0.75) 45%, rgba(250,245,245,0.95) 100%);
+  background-image:
+    radial-gradient(circle at top center, rgba(122,31,45,0.08), transparent 35%),
+    linear-gradient(180deg, rgba(255,244,241,1) 0%, rgba(242,222,222,0.90) 40%, rgba(250,245,245,0.98) 100%);
   border-bottom:1px solid rgba(122,31,45,0.08);
 }
 .hero h2{
-  margin:0;
+  margin:0 auto;
+  max-width:720px;
   font-size:2rem;
   font-weight:700;
   letter-spacing:-0.6px;
   color:#321a21;
 }
 .hero-tagline{
+  margin:16px auto 0;
+  color:var(--primary);
+  font-size:1rem;
+  opacity:0.95;
+  max-width:640px;
+}
+.lead{
+  color:var(--muted);
+  max-width:700px;
+  margin:18px auto 0;
+  font-size:1.08rem;
+  line-height:1.9;
+}
+.hero .container{
+  position:relative;
+  max-width:760px;
+}
+.hero-copy{
+  margin:0 auto;
+}
   margin:12px auto 0;
   color:var(--primary);
   font-size:1rem;
@@ -145,30 +168,10 @@ header{
 .hero .container{
   position:relative;
 }
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 320px;
-  align-items:center;
-  gap:32px;
-}
 .hero-copy{
-  text-align:left;
-  max-width:620px;
-}
-.hero-visual{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.hero-visual img{
-  width:100%;
-  max-width:320px;
-  aspect-ratio:1 / 1;
-  object-fit:cover;
-  border-radius:32px;
-  border:1px solid rgba(122,31,45,0.12);
-  box-shadow:0 24px 50px rgba(122,31,45,0.12);
-  background:var(--surface);
+  text-align:center;
+  max-width:720px;
+  margin:0 auto;
 }
 .hero::after{
   content:'';
@@ -481,7 +484,6 @@ footer{
 @media (max-width:860px){
   .about-grid{grid-template-columns:1fr}
   .footer-row{flex-direction:column;align-items:flex-start}
-  .hero-grid{grid-template-columns:1fr; gap:24px;}
   .hero-copy{display:flex; flex-direction:column; align-items:center;text-align:center;}
   .hero-actions{justify-content:center;}
 }
