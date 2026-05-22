@@ -1,5 +1,141 @@
-/* give the header a maroon background and white creme color text   */
-header {
-  background-color: maroon;
-  color: white;
+/* Basic reset and typography */
+* {
+  box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #222;
+  line-height: 1.5;
+  background: #fbfaf9;
+}
+
+/* Layout container to keep content centered */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header and navigation */
+header {
+  background-color: maroon; /* warm header color */
+  color: #fff;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.main-nav a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  padding: 48px 0;
+  text-align: center;
+}
+.hero .lead {
+  color: #444;
+  max-width: 640px;
+  margin: 12px auto 0;
+}
+
+/* Sections spacing */
+.section {
+  padding: 40px 0;
+}
+.section h3 {
+  margin-top: 0;
+}
+.muted {
+  color: #666;
+}
+
+/* Projects list: simple flex layout */
+.projects-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 16px;
+  border-radius: 6px;
+  flex: 1 1 240px; /* responsive card sizing */
+}
+.card h4 {
+  margin: 0 0 8px 0;
+}
+
+/* Buttons */
+.btn, .btn-primary {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn { background: #f3f3f3; color: #222; border: 1px solid #e5e5e5; }
+.btn-primary { background: maroon; color: #fff; border: none; }
+
+/* Skills list */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.skills-list li {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* Contact form styles */
+.contact-form {
+  max-width: 640px;
+  display: grid;
+  gap: 10px;
+}
+.contact-form label { font-weight: 600; }
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid #cfc; }
+.btn-primary { padding: 10px 14px; }
+
+/* Footer */
+footer { padding: 18px 0; color: #444; }
+.footer-inner { text-align: center; }
+
+/* Small screens: simple responsive tweaks */
+@media (max-width: 640px) {
+  .header-inner { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .main-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+  .projects-list { flex-direction: column; }
+}
+
+/* Helpful comment: replace example project cards with your own projects and links. */
