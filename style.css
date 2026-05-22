@@ -107,9 +107,9 @@ header{
 
 /* Hero */
 .hero{
-  padding:72px 0;
+  padding:76px 0 80px;
   text-align:center;
-  background:linear-gradient(180deg, rgba(255,244,241,0.95) 0%, rgba(242,222,222,0.6) 100%);
+  background:linear-gradient(180deg, rgba(255,244,241,1) 0%, rgba(242,222,222,0.75) 45%, rgba(250,245,245,0.95) 100%);
   border-bottom:1px solid rgba(122,31,45,0.08);
 }
 .hero h2{
@@ -118,6 +118,12 @@ header{
   font-weight:700;
   letter-spacing:-0.6px;
   color:#321a21;
+}
+.hero-tagline{
+  margin:12px auto 0;
+  color:var(--primary);
+  font-size:1rem;
+  opacity:0.9;
 }
 .lead{
   color:var(--muted);
@@ -144,7 +150,7 @@ header{
 
 /* Sections */
 .section{
-  padding:44px 0;
+  padding:54px 0;
   transition:background-color 0.3s ease;
 }
 .section:nth-of-type(odd){
@@ -157,6 +163,21 @@ header{
   margin:0 0 16px 0;
   font-size:1.3rem;
   font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  position:relative;
+}
+.section h3::after{
+  content:'';
+  display:block;
+  width:48px;
+  height:3px;
+  border-radius:3px;
+  background:var(--primary);
+  position:absolute;
+  left:0;
+  bottom:-10px;
 }
 .muted{
   color:var(--muted);
@@ -179,12 +200,13 @@ header{
   padding:22px;
   border:1px solid rgba(122,31,45,0.12);
   flex:1 1 260px;
-  box-shadow:0 14px 30px rgba(122,31,45,0.08);
-  transition:all 0.3s ease;
+  box-shadow:0 12px 26px rgba(122,31,45,0.07);
+  transition:all 0.25s ease;
 }
 .card:hover{
-  box-shadow:0 18px 38px rgba(122,31,45,0.14);
-  transform:translateY(-6px);
+  box-shadow:0 22px 46px rgba(122,31,45,0.16);
+  transform:translateY(-8px);
+  border-color:rgba(122,31,45,0.2);
 }
 .card h4{
   margin:0 0 12px;
@@ -210,12 +232,13 @@ header{
 /* Buttons */
 .btn,.btn-primary{
   display:inline-block;
-  padding:9px 14px;
-  border-radius:8px;
+  padding:10px 16px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:600;
   font-size:0.95rem;
-  transition:all 0.2s ease;
+  transition:all 0.25s ease;
+  box-shadow:0 6px 14px rgba(0,0,0,0.06);
 }
 .btn{
   background:#f6f6f6;
@@ -225,11 +248,15 @@ header{
 .btn:hover{
   background:#eee;
   border-color:#ddd;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 .btn-primary{
   background:var(--primary);
   color:#fff;
   border:none;
+}
+.btn-primary:hover{
+  box-shadow:0 12px 24px rgba(122,31,45,0.25);
 }
 
 /* Skills */
@@ -245,7 +272,7 @@ header{
   background:rgba(122,31,45,0.07);
   border:1px solid rgba(122,31,45,0.18);
   color:var(--primary);
-  padding:10px 14px;
+  padding:12px 16px;
   border-radius:999px;
   font-weight:600;
   font-size:0.95rem;
@@ -255,12 +282,12 @@ header{
   transition:all 0.25s ease;
 }
 .skills-list li:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 24px rgba(122,31,45,0.08);
-  background:rgba(122,31,45,0.1);
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(122,31,45,0.11);
+  background:rgba(122,31,45,0.12);
 }
 .skills-list i{
-  font-size:1.2rem;
+  font-size:1.25rem;
 }
 .skills-list .fa-github{
   color:#333;
