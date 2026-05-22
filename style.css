@@ -1,1 +1,5 @@
-/* Add you CSS here */
+/* give the header a maroon background and white creme color text   */
+header {
+  background-color: maroon;
+  color: white;
+}
