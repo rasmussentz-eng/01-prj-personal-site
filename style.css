@@ -22,12 +22,34 @@ html,body{
 }
 
 h1,h2,h3,h4,h5,h6,
-.site-title,
 .section h3,
 .card h4,
 .about-badge{
   font-family: 'Poppins', 'Inter', sans-serif;
   letter-spacing:-0.4px;
+}
+.site-title{
+  font-family: 'Poppins', 'Inter', sans-serif;
+  letter-spacing:-0.4px;
+}
+/* PHAZE logo with unique font styling */
+.phaze-logo{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+.copyright-symbol{
+  font-size: 0.5em;
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  opacity: 0.85;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: normal;
 }
 
 /* Layout container */
