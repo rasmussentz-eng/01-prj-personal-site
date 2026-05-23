@@ -229,12 +229,14 @@ header{
   z-index:-1;
 }
 
-.hero-actions{
+.hero-buttons{
   display:flex;
+  justify-content:center;
+  align-items:center;
   flex-wrap:wrap;
-  justify-content:flex-start;
-  gap:12px;
-  margin-top:28px;
+  gap:16px;
+  margin-top:30px;
+  width:100%;
 }
 
 .btn-secondary{
