@@ -32,24 +32,41 @@ h1,h2,h3,h4,h5,h6,
   font-family: 'Poppins', 'Inter', sans-serif;
   letter-spacing:-0.4px;
 }
-/* PHAZE logo with unique font styling */
+/* PHAZE logo with bold retro baseball-style script */
 .phaze-logo{
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.35rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #fff;
+  letter-spacing: 0.04em;
   position: relative;
   display: inline-block;
+  color: #ffffff;
+  text-shadow: 
+    3px 3px 0px #2a0a12,
+    6px 6px 0px rgba(0, 0, 0, 0.3),
+    -1px -1px 0px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.phaze-logo:hover{
+  transform: scale(1.06) translateY(-2px);
+  text-shadow: 
+    4px 4px 0px #2a0a12,
+    8px 8px 2px rgba(0, 0, 0, 0.4),
+    -1px -1px 0px rgba(255, 255, 255, 0.2);
 }
 .copyright-symbol{
-  font-size: 0.5em;
+  font-size: 0.48em;
   position: absolute;
-  top: -2px;
-  right: -8px;
-  opacity: 0.85;
+  top: -6px;
+  right: -12px;
   font-family: 'Inter', sans-serif;
   letter-spacing: normal;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 
+    2px 2px 0px #2a0a12,
+    4px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 /* Layout container */
@@ -511,6 +528,7 @@ footer{
 }
 @media (max-width:640px){
   .header-inner{flex-direction:column;align-items:flex-start}
+  .phaze-logo{font-size:1.4rem}
   .main-nav{flex-wrap:wrap}
   .projects-list{flex-direction:column}
   .footer-row{align-items:flex-start}
